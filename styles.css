@@ -1,0 +1,138 @@
+/* 基础样式 */
+body {
+    background-color: #f5f5f5;
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* 错误详情样式 */
+.error-details {
+    margin-top: 16px;
+    border: 2px solid #b00020;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.error-details-header {
+    background-color: #ffebee;
+    padding: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.error-details-title {
+    color: #b00020;
+    font-weight: 500;
+    margin-left: 8px;
+}
+
+.error-details-content {
+    display: none;
+    padding: 12px;
+    background-color: #fff;
+    white-space: pre-wrap;
+    font-family: monospace;
+    font-size: 0.9em;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.error-details[open] .error-details-content {
+    display: block;
+}
+
+.arrow-icon {
+    transition: transform 0.2s;
+    font-size: 0.8em;
+}
+
+.error-details[open] .arrow-icon {
+    transform: rotate(90deg);
+}
+
+/* 布局样式 */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-bottom: 100px;
+}
+
+.image-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.generated-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 4px;
+    margin-top: 15px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* 加载动画 */
+.loading-overlay {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.loading-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.loading-dialog {
+    background: white;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    text-align: center;
+    min-width: 280px;
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #6200ee;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 16px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 页脚 */
+.footer {
+    background-color: #ffffff;
+    padding: 16px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+}
