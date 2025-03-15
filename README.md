@@ -8,5 +8,5 @@ You can visit the demo site to see the effects, or clone the project to your com
 
 ## Other Link
 
-[BiliBili](https://m.bilibili.com/space/1666723512)
+[BiliBili](https://m.bilibili.com/space/1666723512)<br>
 [MiyozMC Blog](https://miyozmc.pages.dev)
